@@ -14,3 +14,8 @@ export const NEPALI_MONTHS = [
   "Falgun",
   "Chaitra",
 ];
+
+const INITIAL_YEAR = 2076;
+export const AVAILABLE_YEARS = Array.from({ length: 7 }).map(
+  (_, index) => INITIAL_YEAR + index
+);

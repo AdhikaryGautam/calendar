@@ -1,13 +1,11 @@
 import Calendar from "@/components/calendar/Calendar";
 import { getYearData } from "@/lib/api";
-import { getCurrentNepaliDate } from "@/utils/date.utils";
 import { Suspense } from "react";
 
-export default async function Home() {
-  const currentDate = getCurrentNepaliDate();
-
-  const year = currentDate.year;
-  const month = currentDate.month;
+export default async function Page({
+  params,
+}: Readonly<{ params: { year: string; month: string } }>) {
+  const { year, month } = params;
 
   const data = await getYearData(year);
 
