@@ -32,12 +32,9 @@ export const CalendarButton = ({
   );
 };
 
-interface EmptyCalendarButtonProps
-  extends React.HTMLAttributes<HTMLDivElement> {}
-
 export const EmptyCalendarButton = ({
   className,
   ...props
-}: EmptyCalendarButtonProps) => {
+}: React.HTMLAttributes<HTMLDivElement>) => {
   return <div className={cn("h-20 bg-muted", className)} {...props}></div>;
 };
