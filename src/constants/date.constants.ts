@@ -15,6 +15,21 @@ export const NEPALI_MONTHS = [
   "Chaitra",
 ];
 
+export const AD_MONTHS = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December",
+];
+
 const INITIAL_YEAR = 2076;
 export const AVAILABLE_YEARS = Array.from({ length: 7 }).map(
   (_, index) => INITIAL_YEAR + index
