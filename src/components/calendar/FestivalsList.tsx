@@ -6,6 +6,12 @@ import React from "react";
 export const FestivalsList = ({ data }: { data: ObjectDto[] }) => {
   return (
     <div className="flex flex-col gap-2 overflow-y-auto max-h-[400px]">
+      {data?.length === 0 && (
+        <p className="text-center text-sm text-muted-foreground">
+          No results found
+        </p>
+      )}
+
       {data.map((day, index) => {
         const month = NEPALI_MONTHS[Number(day?.month) - 1];
 
